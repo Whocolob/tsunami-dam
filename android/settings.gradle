@@ -1,0 +1,2 @@
+rootProject.name = "TsunamiDam"
+include ':app'

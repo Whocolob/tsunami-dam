@@ -1,0 +1,28 @@
+[package]
+name = "tsunami_dam"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tsunami_dam"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "tsunami_dam_pc"
+path = "src/main.rs"
+
+[dependencies]
+bevy = "0.15"
+avian3d = "0.2"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = "z"
+strip = true
