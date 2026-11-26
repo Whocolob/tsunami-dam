@@ -37,7 +37,7 @@ pub fn run_app() {
     app.add_plugins(DefaultPlugins.set(WindowPlugin {
         primary_window: Some(Window {
             title: "Tsunami Dam Simulator".into(),
-            resolution: (1280.0, 720.0).into(),
+            resolution: (1280.0_f32, 720.0_f32).into(),
             resizable: true,
             ..default()
         }),
